@@ -4,6 +4,8 @@ library(xlsx)
 library(RColorBrewer)
 library(wordcloud)
 
+rm(list=ls())
+
 #functions
 clean.corpus <- function(txt){
   text_corpus <- tm_map(text_corpus, stemDocument)
@@ -22,8 +24,11 @@ word.frequency <- function (TDM){
   assign('word.frequency',word.frequency,envir=.GlobalEnv)
 }
 
+data.dir<-"GitHub"
+
+
 #read the text file
-setwd("./GitHub")
+setwd(data.dir)
 fileName = "Donald Wilber Report.txt"
 conn <- file(fileName,open="r")
 text <-readLines(conn)
