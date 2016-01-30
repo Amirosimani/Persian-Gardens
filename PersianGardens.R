@@ -24,7 +24,7 @@ word.frequency <- function (TDM){
   assign('word.frequency',word.frequency,envir=.GlobalEnv)
 }
 
-data.dir<-"GitHub"
+data.dir<-"GitHub/Persian-Gardens"
 
 
 #read the text file
