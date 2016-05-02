@@ -17,7 +17,7 @@ clean.corpus <- function(txt){
   text_corpus <- tm_map(text_corpus, stemDocument)
   text_corpus <- tm_map(text_corpus, removeWords, c(stopwords("english"), stopwords("SMART"))) 
   text_corpus <- tm_map(text_corpus, removePunctuation)
-  #text_corpus <- tm_map(text_corpus, tolower)
+  #text_corpus <- tm_map(text_corpus, content_transformer(tolower))
   text_corpus <- tm_map(text_corpus, stripWhitespace)
   text_corpus <- tm_map(text_corpus, PlainTextDocument) 
   assign('text_corpus',text_corpus,envir=.GlobalEnv)
